@@ -35,9 +35,10 @@ const saveInput = function(e) {
         username: 'Twitter',
         tweet: InputData,
     }
-
-    $.post('api/tweet', postInput)
+console.log(postInput);
+    $.post('/api/tweet', postInput)
     .then(function(data){
+        render(data.tweet);
         console.log()
         console.log('this is data from the response ====>', data)
             const tweet = {
@@ -49,7 +50,7 @@ const saveInput = function(e) {
 
 $('.tweet-btn').on('click', saveInput);
 
-$.get('api/tweet')
+$.get('/api/tweet')
 .then(function(serverData){
     for (let i=0; i <serverData.length; i++){
         render(serverData[i].tweet);
