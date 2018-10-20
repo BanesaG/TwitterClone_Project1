@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(express.static("public"));
 
 
-mongoose.connect('mongodb://myproject1:js4567@ds137483.mlab.com:37483/heroku_78t5nvpt'); 
+mongoose.connect(process.env.MOGODB_URI || 'mongodb://localhost/twitter'); 
 
 
 require('./routes/api-routes')(app); 
