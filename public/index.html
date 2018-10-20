@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+    <header>
+        <div class="icons">
+            <a href="twitter-bird-font.png" target='_blank'><i class="fab fa-twitter">  Home  </i></a>
+        </div>
+
+        <div class="btn">
+            <button class="button" id="new-tweet">Tweet</button> 
+        </div>  
+
+    </header>
+    
+        <div id="cover">
+            <img class="cover" src="assets/hashtag.png" alt="cover hashtag" style="transform: none;">
+            <img src="assets/twitter-round-icon.png" class="avatar" width="200" height="200">
+        </div>
+           
+        </div>
+    
+    <nav></nav>
+    <main>
+        <div class="container feed">
+            <div class="left-feed">
+                <h3> Twitter </h3>
+                <br>
+                <p> @Twitter</p>
+                <br>
+                <p class="what">What's happening?!</p>
+                <br>               
+                <div class="location">
+                    <a href="..//map-marker.png"><i class="fal fa-map-marker-alt"> Everywhere </i></a>
+                </div>
+                <br>
+                <p>about.twitter.com</p>
+                <br>
+                <p>View broadcasts</p>
+                <br>
+                <p class="fal fa-calendar-alt fa sm"> Joined February 2007 </p>
+            </div>
+            
+            <div class="center-feed"> 
+                    <p class="profile-heading">&nbsp;&nbsp;&nbsp;Tweets &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tweets & replies &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Media</p> <hr>
+                <div><img src="assets/twitter-round-icon.png" class="avatar2" width="48" height="48">
+                    <div class="user-date">   
+                        <span class="userTwitter"> Twitter &nbsp;&nbsp; @Twitter </span> 
+                        <span class="postDate"> &nbsp; &nbsp; Oct 18 </span> 
+                        <div class="loadNewTweet">
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio nihil labore assumenda commodi velit a necessitatibus, dolorum vel aliquam! Dolores ad distinctio unde explicabo, vitae quam esse tempora eius maxime.</p>
+                            <br> 
+                       </div>                      
+                    </div>               
+                </div>               
+            </div>
+            
+            <div class="right-feed">
+                <h1>New to Twitter?</h1>
+                <br>
+                <p>Sign up now to get your own personalized timeline!</p>
+                <br>
+                    <div class="btn2">
+                        <button class="button2" id="new-tweet">Sign up</button>
+                    </div> 
+            </div>
+        </div>
+    </main>
+
+    <div class="modal-container hide">
+        <div class="modal">
+            <h2>Compose new Tweet<span class="close-modal exit"> x </span></h2>
+            <textarea id="text" wordcount="140" placeholder ="What's happening?" rows="8" cols="80" id="Input"></textarea>
+            <div id="counter"></div>
+            <button class="tweet-btn">Tweet</button>
+        </div>
+        
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+  
+    <script src="app.js"></script>
+  
+</body>
+
+</html>
