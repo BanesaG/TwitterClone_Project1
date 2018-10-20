@@ -10,11 +10,11 @@ app.use(express.json());
 app.use(express.static("public"));
 
 
-mongoose.connect(mongodb:mongodb:mongodb://<myproject1>:<js4567>@ds137483.mlab.com:37483/heroku_78t5nvpt}); 
+mongoose.connect('mongodb://myproject1:js4567@ds137483.mlab.com:37483/heroku_78t5nvpt'); 
 
 
 require('./routes/api-routes')(app); 
 require('./routes/html-routes')(app); 
 
 
-app.listen((process.env.PORT || 8080), () => {console.log(`App is now listening on PORT ${PORT}`)});
+app.listen(PORT, () => {console.log(`App is now listening on PORT ${PORT}`)});
