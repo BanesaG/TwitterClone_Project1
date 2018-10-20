@@ -11,7 +11,7 @@ app.use(express.static("public"));
 
 
 mongoose.connect(process.env.MOGODB_URI || 'mongodb://localhost/twitter', { useNewUrlParser: true }); 
-
+console.log(process.env.MONGODB_URI);
 
 require('./routes/api-routes')(app); 
 require('./routes/html-routes')(app); 
