@@ -22,3 +22,12 @@ module.exports = function(app) {
     });
 };
 
+app.delete('/api/tweet/:_id', function (req, res) {
+    db.Tweet.findByIdAndRemove({
+      _id: req.params._id
+    })
+      .then(function () {
+        res.json({ success: true })
+      })
+  });
+};

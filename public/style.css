@@ -100,6 +100,13 @@ p.profile-heading {
     font-size: small; 
 }
 
+.delete{
+    color: grey;
+    border: none;
+    position: relative;
+    right: -290px;
+}
+
 .user-date {
     background:  #FFFFFF;
     padding-top: 10px; 

@@ -28,8 +28,8 @@ const render = function(tweet){
 
 const saveInput = function(e) {
     e.preventDefault();
-    text_max = 140;
-    $('#counter').html(text_max + ' characters');
+    text_remaining = 140;
+    $('#counter').html(text_remaining + ' characters');
     const InputData = $('#Input').val();
     const postInput = {
         username: 'Twitter',
@@ -65,6 +65,21 @@ $(document).ready(function () {
         let text_length = $('#text').val().length;
              text_remaining = text_max - text_length;
         
-            $('#counter').html(text_max + ' characters');
+            $('#counter').html(text_remaining + ' characters');
     });  
 });
+
+const deleteTweet = function (event) {
+    const tweetIndex = $(this).data('id');
+    $.ajax({
+      url: `api/tweet/${tweetIndex}`,
+      method: 'DELETE'
+    }).then(function (data) {
+      if (data.success) {
+        renderAll();
+      } else {
+        alert('There was a problem with your submission.')
+      }
+    });
+  };
+  $('body').on('click', '.delete', deleteTweet);
