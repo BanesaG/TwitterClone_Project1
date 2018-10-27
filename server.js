@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(express.static("public"));
 
 
-mongoose.connect(process.env.MOGODB_URI || 'mongodb://localhost/twitter', { useNewUrlParser: true }); 
+mongoose.connect(/*process.env.MOGODB_URI ||*/ 'mongodb://localhost/twitterBBBBB', { useNewUrlParser: true }); 
 console.log(process.env.MONGODB_URI);
 
 require('./routes/api-routes')(app); 

@@ -20,14 +20,22 @@ module.exports = function(app) {
             res.json(err);
         });
     });
-};
 
-app.delete('/api/tweet/:_id', function (req, res) {
-    db.Tweet.findByIdAndRemove({
-      _id: req.params._id
-    })
-      .then(function () {
-        res.json({ success: true })
-      })
-  });
-};
+
+app.delete('/api/deleteTweet', function(req, res){
+    const chosen = req.body.tweet_id;
+  
+    db.Tweet.remove({_id: chosen}).then(function(dbtweets){
+        db.Tweet.find({}).then(function(dbtweets){
+            res.json(dbtweets);
+          })
+          .catch(function(err){
+              res.json(err);
+          })
+        })
+        .catch(function(err){
+          res.json(err);
+      });
+    });
+  
+  }
