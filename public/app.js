@@ -13,7 +13,7 @@ const hideModal = function(e) {
 
 $('#new-tweet').on('click', showModal);
 $('.close-modal').on('click', hideModal);
-// $('.tweet-btn').on('click', hideModal); 
+
 
 const render2 = function(data){
     alert(data.tweet);
